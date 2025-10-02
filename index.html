@@ -44,6 +44,15 @@
         .timeline-marker {
             @apply absolute top-5 left-[-9px] w-5 h-5 bg-teal-500 rounded-full border-4 border-white;
         }
+        .agreement-box {
+            @apply bg-white rounded-xl shadow-lg p-8 md:p-12 border border-gray-200;
+        }
+        .agreement-box h3 {
+            @apply text-lg font-semibold text-gray-700 mt-6 mb-2;
+        }
+        .agreement-box p {
+            @apply text-gray-600 mb-4;
+        }
     </style>
 </head>
 <body class="text-gray-700">
@@ -223,49 +232,96 @@
                                 <tr>
                                     <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider">Expense Category</th>
                                     <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider">Details</th>
-                                    <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider text-right">Amount</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="px-6 py-4 font-medium text-gray-900">Accommodation</td>
-                                    <td class="px-6 py-4">3 nights' stay in comfortable lodging in Yeppoon.</td>
-                                    <td class="px-6 py-4"><span class="badge bg-green-100 text-green-800">PAID BY US</span></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">3 nights' stay in a comfortable, modern Airbnb. This is fully pre-paid by us.</td>
+                                    <td class="px-6 py-4 text-right"><span class="badge bg-green-100 text-green-800">PAID BY US</span></td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-medium text-gray-900">Fuel</td>
-                                    <td class="px-6 py-4">Fuel allowance for the vehicle for the round trip.</td>
-                                    <td class="px-6 py-4"><span class="badge bg-green-100 text-green-800">PAID BY US</span></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">A generous fuel allowance is provided to cover the entire round trip from Noosa to Yeppoon.</td>
+                                    <td class="px-6 py-4 text-right"><span class="badge bg-green-100 text-green-800">PAID BY US</span></td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-medium text-gray-900">Meal & Travel Allowance</td>
-                                    <td class="px-6 py-4">$150 per person to cover food and incidentals.</td>
-                                    <td class="px-6 py-4"><span class="badge bg-blue-100 text-blue-800">PAID ON DAY 1</span></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">A cash allowance to cover all your food, drinks, and incidentals during the trip.</td>
+                                    <td class="px-6 py-4 text-right font-semibold text-gray-800">$150</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-medium text-gray-900">Driver Bonus</td>
-                                    <td class="px-6 py-4">An additional $150 for the person driving their vehicle.</td>
-                                    <td class="px-6 py-4"><span class="badge bg-blue-100 text-blue-800">PAID ON DAY 1</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 font-medium text-gray-900">Cleaning Pay</td>
-                                    <td class="px-6 py-4">$750 for two days of work ($375/day).</td>
-                                    <td class="px-6 py-4"><span class="badge bg-purple-100 text-purple-800">PAID INSTANTLY</span></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">An additional bonus for the team member who drives their own suitable vehicle for the trip.</td>
+                                    <td class="px-6 py-4 text-right font-semibold text-gray-800">$150</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-medium text-gray-900">Prep Day Pay</td>
-                                    <td class="px-6 py-4">An extra $50 for the travel & prep day.</td>
-                                    <td class="px-6 py-4"><span class="badge bg-purple-100 text-purple-800">PAID INSTANTLY</span></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">For Day 1: site inspection, and collecting/dropping materials on-site. This ensures Day 2 & 3 are 100% focused on the main task.</td>
+                                    <td class="px-6 py-4 text-right font-semibold text-gray-800">$50</td>
+                                </tr>
+                                 <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Cleaning Pay</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">For 2 full days of work (approx. 11 nett hours per day). Paid instantly upon client sign-off.</td>
+                                    <td class="px-6 py-4 text-right font-semibold text-gray-800">$750</td>
                                 </tr>
                             </tbody>
+                            <tfoot class="bg-gray-50">
+                                <tr>
+                                    <td colspan="2" class="px-6 py-4 font-bold text-gray-800 uppercase">Total Payment (Team Member)</td>
+                                    <td class="px-6 py-4 text-right font-extrabold text-xl text-teal-600">$950</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="px-6 py-4 font-bold text-gray-800 uppercase">Total Payment (Designated Driver)</td>
+                                    <td class="px-6 py-4 text-right font-extrabold text-xl text-teal-600">$1100</td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
-                <div class="text-center mt-6">
-                    <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg inline-flex items-center hover:bg-gray-300 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M4 12.5V12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v0"/><path d="M4 18v-1.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2V18"/><path d="M4 6.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v0"/><path d="m14 13 3 3 3-3"/><path d="M17 16V4"/></svg>
-                        <span>Export to Sheets</span>
-                    </button>
+                <div class="mt-8 space-y-4 text-sm text-gray-600">
+                    <p class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg"><strong class="font-bold text-yellow-800">Please Note:</strong> The amounts listed above are final. No additional funds will be paid for any reason. Your acceptance of this role confirms your agreement with this compensation structure.</p>
+                    <p class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg"><strong class="font-bold text-blue-800">A Note on Perfection:</strong> We aim for a flawless handover on Thursday. If the work is not approved by the builder, Day 4 (Friday morning) will be required for any necessary fix-ups before departure. This can be easily avoided by working together to achieve a perfect result on Day 2 and 3.</p>
+                </div>
+            </section>
+
+            <!-- Agreement Section -->
+            <section class="mb-16">
+                <h2 class="section-title">Subcontractor Agreement</h2>
+                <div class="agreement-box">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900">SPruces Co – SUBCONTRACTOR AGREEMENT</h2>
+                        <p class="text-gray-500">Version: YP2025-10</p>
+                    </div>
+                    <p><strong>Between:</strong><br>Spruces Co (ABN: 63664218759) – "the Contractor"</p>
+                    <p><strong>And:</strong><br>Your Name / Your Business Name (Your ABN) – "the Subcontractor"</p>
+                    <hr class="my-6">
+                    <h3>1. Scope of Work</h3>
+                    <p>The Subcontractor agrees to provide professional construction cleaning services for the Yeppoon Project as outlined on this webpage. Work must be performed to a flawless, industry-leading standard of quality and safety, ensuring a successful handover to the builder.</p>
+                    <h3>2. Payment Terms</h3>
+                    <p>The full compensation amount, as detailed in the "Compensation & Perks" section, will be paid to the Subcontractor immediately upon final approval and sign-off from the builder on Thursday, 9th October 2025. No other payments will be made.</p>
+                    <h3>3. Independent Contractor Relationship</h3>
+                    <p>The Subcontractor is engaged as an independent contractor and is not an employee, agent, or partner of Spruces Co. The Subcontractor is solely responsible for their own tax, superannuation, insurance (including Public Liability), and Work Health & Safety (WHS) obligations.</p>
+                    <h3>4. Termination</h3>
+                    <p>The Contractor may terminate this Agreement with immediate effect if the Subcontractor fails to perform the duties to the required standard or breaches safety protocols.</p>
+                    <h3>5. Entire Agreement</h3>
+                    <p>This webpage and the terms within constitute the entire agreement between the parties and override all previous arrangements, verbal or written.</p>
+                    <h3>6. Governing Law</h3>
+                    <p>This Agreement is governed by the laws of Queensland, Australia.</p>
+                    
+                    <div class="mt-10 pt-6 border-t">
+                        <h3 class="text-xl font-bold text-center mb-4">Acceptance of Agreement</h3>
+                        <p class="text-center text-sm text-gray-500">By accepting this role, you acknowledge that you have read, understood, and agree to be bound by the terms and conditions outlined in this document.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center bg-teal-50 border-2 border-dashed border-teal-300 text-teal-800 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">To Accept This Offer:</h3>
+                    <p>Please copy the text from the agreement box above and paste it into an email.</p>
+                    <p class="mt-2">Include your <strong class="text-teal-900">Full Name</strong> and <strong class="text-teal-900">ABN</strong> in the email body.</p>
+                    <p class="mt-4">Send it to:</p>
+                    <a href="mailto:hi@spruces.co" class="text-xl font-bold text-white bg-teal-500 hover:bg-teal-600 px-4 py-2 rounded-lg inline-block mt-2 transition">hi@spruces.co</a>
                 </div>
             </section>
 
@@ -281,5 +337,4 @@
 
 </body>
 </html>
-
 
