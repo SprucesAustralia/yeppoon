@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yeppoon Project: Elite Strike Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind's gray-50 */
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 text-center mb-8;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        .badge {
+            @apply inline-block bg-teal-100 text-teal-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full;
+        }
+        /* Style for the timeline */
+        .timeline-item {
+            @apply relative pl-8 sm:pl-12 py-4;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0; /* Tailwind's gray-200 */
+        }
+        .timeline-item:last-child:before {
+            height: 3rem; /* Adjust to stop the line before the end */
+        }
+        .timeline-marker {
+            @apply absolute top-5 left-[-9px] w-5 h-5 bg-teal-500 rounded-full border-4 border-white;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-5xl">
+
+        <!-- Header Section -->
+        <header class="relative rounded-b-2xl overflow-hidden shadow-2xl mb-12">
+            <img src="yeppoon-sunrise.jpg" alt="Stunning sunrise over Yeppoon beach" class="w-full h-80 object-cover">
+            <div class="absolute inset-0 hero-gradient flex flex-col justify-end p-8 md:p-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">Join Our Elite Strike Team</h1>
+                <p class="text-xl text-white mt-2 font-light">A Paid Working Getaway to Yeppoon!</p>
+            </div>
+        </header>
+
+        <main class="px-4 sm:px-6 lg:px-8">
+
+            <!-- Introduction Section -->
+            <section class="text-center mb-16">
+                <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                    This isn't just another cleaning job. This is a critical, high-stakes mission for a major Brisbane builder, and we need a dedicated team of four professionals to deliver a flawless result. We're heading to the beautiful coastal town of Yeppoon for a fast-paced, two-day project. Think of it as a working getaway where you’ll put your skills to the test, work with a great team, and get paid <span class="font-bold text-teal-600">instantly</span> for your excellent work.
+                </p>
+            </section>
+
+            <!-- Key Details Section -->
+            <section class="mb-16">
+                 <h2 class="section-title">The Opportunity: Key Details</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Location Card -->
+                    <div class="card text-center p-6">
+                        <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-teal-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                        <h3 class="font-bold text-lg mb-2">Location</h3>
+                        <p class="text-sm">A new construction site in the Rockhampton/Yeppoon area.</p>
+                    </div>
+                    <!-- Accommodation Card -->
+                    <div class="card text-center p-6">
+                        <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-teal-500"><path d="m2 9 10-7 10 7"/><path d="M12 22V12h8v10h-8Z"/><path d="M4 22V12h8v10H4Z"/></svg></div>
+                        <h3 class="font-bold text-lg mb-2">Accommodation</h3>
+                        <p class="text-sm">Comfortable lodging for 3 nights in scenic Yeppoon, all covered by us.</p>
+                    </div>
+                     <!-- Team Card -->
+                    <div class="card text-center p-6">
+                        <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-teal-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                        <h3 class="font-bold text-lg mb-2">The A-Team</h3>
+                        <p class="text-sm">An elite 4-person specialist team (that's you!).</p>
+                    </div>
+                     <!-- Goal Card -->
+                    <div class="card text-center p-6">
+                        <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-teal-500"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                        <h3 class="font-bold text-lg mb-2">The Goal</h3>
+                        <p class="text-sm">A perfect final builder's clean on a 711m² site for a successful handover.</p>
+                    </div>
+                 </div>
+            </section>
+            
+            <!-- Accommodation Photos Section -->
+            <section class="mb-16">
+                 <h2 class="section-title">Your Home Away From Home</h2>
+                 <a href="https://www.airbnb.com/rooms/757483521991013226?check_in=2025-10-07&check_out=2025-10-10&guests=1&adults=4&s=67&unique_share_id=3627a2d7-47d9-45c0-8f16-8e373fe2b6c8" target="_blank" rel="noopener noreferrer" class="block group">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="accommodation-1.jpg" alt="Comfortable lodging in Yeppoon" class="rounded-lg shadow-md w-full h-full object-cover group-hover:opacity-90 transition-opacity">
+                        <img src="accommodation-2.jpg" alt="Relaxing views from the accommodation" class="rounded-lg shadow-md w-full h-full object-cover group-hover:opacity-90 transition-opacity">
+                        <img src="accommodation-3.jpg" alt="Modern amenities at the accommodation" class="rounded-lg shadow-md w-full h-full object-cover group-hover:opacity-90 transition-opacity">
+                    </div>
+                    <p class="text-center text-teal-600 font-semibold mt-4 group-hover:underline">View the full listing here &rarr;</p>
+                 </a>
+            </section>
+
+
+            <!-- Itinerary Section -->
+            <section class="mb-16">
+                <h2 class="section-title">Itinerary & Mission Schedule</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-10">
+                    <div class="relative">
+                        <!-- Day 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="ml-4">
+                                <span class="badge">Tuesday, 7th Oct</span>
+                                <h3 class="text-xl font-bold text-gray-800">Day 1: Travel & Reconnaissance</h3>
+                                <p class="text-sm text-gray-500 mb-2">7:00 AM - 7:00 PM</p>
+                                <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                    <li><span class="font-semibold">7:00 AM:</span> Team meets in Noosa and departs.</li>
+                                    <li><span class="font-semibold">2:00 PM:</span> Arrive in Yeppoon for professional site walk-through.</li>
+                                    <li><span class="font-semibold">4:00 PM:</span> Check into accommodation.</li>
+                                    <li><span class="font-semibold">Evening:</span> Your time to relax and <a href="https://www.queensland.com/au/en/places-to-see/destinations/capricorn/yeppoon" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold">explore Yeppoon</a>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Day 2 & 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="ml-4">
+                                <span class="badge">Wed 8th & Thurs 9th Oct</span>
+                                <h3 class="text-xl font-bold text-gray-800">Day 2 & 3: The Main Mission</h3>
+                                <p class="text-sm text-gray-500 mb-2">6:00 AM - 5:00 PM</p>
+                                <p class="text-gray-600">Full day of detailed cleaning with a 1-hour lunch break. We'll work smart and efficiently to achieve a flawless finish.</p>
+                            </div>
+                        </div>
+                        <!-- Day 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="ml-4">
+                                <span class="badge">Friday, 10th Oct</span>
+                                <h3 class="text-xl font-bold text-gray-800">Day 4: Victory & Return</h3>
+                                <p class="text-sm text-gray-500 mb-2">Morning</p>
+                                <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                    <li>Enjoy a leisurely morning in Yeppoon.</li>
+                                    <li><span class="font-semibold">10:00 AM (Approx.):</span> Check out and begin the journey back to Noosa.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Instant Payment Callout -->
+            <section class="mb-16">
+                 <div class="bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-xl shadow-xl p-8 text-center">
+                    <h3 class="text-3xl font-extrabold mb-2">INSTANT PAYMENT!</h3>
+                    <p class="text-lg">The moment the builder signs off on our work on Thursday evening, your payment will be transferred. You will be paid in full before you even arrive home!</p>
+                 </div>
+            </section>
+            
+            <!-- Project Site Photos -->
+            <section class="mb-16">
+                 <h2 class="section-title">The Mission Site</h2>
+                 <p class="text-center max-w-2xl mx-auto mb-8">A glimpse into the 711m² project awaiting our expert touch.</p>
+                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <img src="project-1.jpg" alt="Project site photo 1" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-2.jpg" alt="Project site photo 2" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-3.jpg" alt="Project site photo 3" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-4.jpg" alt="Project site photo 4" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-5.jpg" alt="Project site photo 5" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-6.jpg" alt="Project site photo 6" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-7.jpg" alt="Project site photo 7" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-8.jpg" alt="Project site photo 8" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-9.jpg" alt="Project site photo 9" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                    <img src="project-10.jpg" alt="Project site photo 10" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                 </div>
+            </section>
+
+            <!-- A-Team Roles Section -->
+            <section class="mb-16">
+                <h2 class="section-title">Your Role in the A-Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Cleaner 1 -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Cleaner 1: Window & Finishing Specialist</h3>
+                        <p class="text-gray-600">Your first priority is all interior glass, including windows, tracks, frames, and seals. Once perfected, you'll assist with high-level dusting and the final wipe-down of all joinery and surfaces.</p>
+                    </div>
+                    <!-- Cleaner 2 -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Cleaner 2: Floor Care Specialist</h3>
+                        <p class="text-gray-600">Your mission is the 460m² of carpet cleaning, followed by leading the vacuuming of all hard floors and assisting with baseboard cleaning.</p>
+                    </div>
+                    <!-- Cleaner 3 -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Cleaner 3: Kitchen & Wet Areas Specialist</h3>
+                        <p class="text-gray-600">You will own the deep cleaning and sanitisation of all kitchens and bathrooms, polishing all fixtures and mirrors to a perfect shine.</p>
+                    </div>
+                    <!-- Cleaner 4 -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Cleaner 4: Walls & Fixtures Specialist</h3>
+                        <p class="text-gray-600">Your mission is the top-down cleaning of all vertical surfaces, including walls, switch plates, joinery, cabinets, and built-in furniture.</p>
+                    </div>
+                </div>
+                 <div class="mt-8 text-center bg-teal-50 border-l-4 border-teal-500 text-teal-800 p-4 rounded-r-lg">
+                    <p class="font-semibold">Teamwork makes the dream work! Once primary tasks are complete, everyone will work together on the final mopping, scrubbing, and detailed floor finishing.</p>
+                </div>
+            </section>
+
+            <!-- Compensation Section -->
+            <section class="mb-16">
+                <h2 class="section-title">Compensation & Perks</h2>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-50 border-b border-gray-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider">Expense Category</th>
+                                    <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider">Details</th>
+                                    <th class="px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-wider">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Accommodation</td>
+                                    <td class="px-6 py-4">3 nights' stay in comfortable lodging in Yeppoon.</td>
+                                    <td class="px-6 py-4"><span class="badge bg-green-100 text-green-800">PAID BY US</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Fuel</td>
+                                    <td class="px-6 py-4">Fuel allowance for the vehicle for the round trip.</td>
+                                    <td class="px-6 py-4"><span class="badge bg-green-100 text-green-800">PAID BY US</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Meal & Travel Allowance</td>
+                                    <td class="px-6 py-4">$150 per person to cover food and incidentals.</td>
+                                    <td class="px-6 py-4"><span class="badge bg-blue-100 text-blue-800">PAID ON DAY 1</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Driver Bonus</td>
+                                    <td class="px-6 py-4">An additional $150 for the person driving their vehicle.</td>
+                                    <td class="px-6 py-4"><span class="badge bg-blue-100 text-blue-800">PAID ON DAY 1</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Cleaning Pay</td>
+                                    <td class="px-6 py-4">$750 for two days of work ($375/day).</td>
+                                    <td class="px-6 py-4"><span class="badge bg-purple-100 text-purple-800">PAID INSTANTLY</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Prep Day Pay</td>
+                                    <td class="px-6 py-4">An extra $50 for the travel & prep day.</td>
+                                    <td class="px-6 py-4"><span class="badge bg-purple-100 text-purple-800">PAID INSTANTLY</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg inline-flex items-center hover:bg-gray-300 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M4 12.5V12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v0"/><path d="M4 18v-1.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2V18"/><path d="M4 6.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v0"/><path d="m14 13 3 3 3-3"/><path d="M17 16V4"/></svg>
+                        <span>Export to Sheets</span>
+                    </button>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-10 border-t border-gray-200 mt-12">
+            <p class="text-gray-600 font-bold text-2xl">The Bottom Line</p>
+            <p class="text-gray-500">Your hard work is rewarded immediately. No waiting weeks for an invoice to be paid.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
